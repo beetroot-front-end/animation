@@ -1,0 +1,40 @@
+@keyframes animation-test {
+    0%,50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: cubic-bezier(.2,.25,.55,1);
+        animation-timing-function: cubic-bezier(.2,.25,.55,1)
+    }
+    25% {
+        -webkit-transform: translateY(-7px);
+        transform: translateY(-7px);
+        -webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75);
+        animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    }
+    75% {
+        -webkit-transform: translateY(7px);
+        transform: translateY(7px);
+        -webkit-animation-timing-function: cubic-bezier(.45,0,.8,.75);
+        animation-timing-function: cubic-bezier(.45,0,.8,.75)
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+.test {
+  position: relative;
+  height: 400px;
+}
+.test img {
+  position: absolute;
+}
+.test img:nth-child(1) {
+  animation: animation-test 4.2s infinite
+}
+.test img:nth-child(2) {
+  animation: animation-test 3.8s infinite;
+}
+.test img:nth-child(3) {
+  animation: animation-test 3.5s infinite;
+}
