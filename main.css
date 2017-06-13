@@ -38,3 +38,47 @@
 .test img:nth-child(3) {
   animation: animation-test 3.5s infinite;
 }
+.field {
+    height: 400px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes ball {
+    20% {
+        top: calc(100% - 75px);
+        left: 20%;
+    }
+    40% {
+        top: 0;
+        left: 40%;
+    }
+    60% {
+        top: calc(100% - 75px);
+        left: 60%;
+    }
+    80% {
+        top: 0;
+        left: 80%;
+    }
+    100% {
+        top: calc(100% - 75px);
+        left: 100%;
+    }
+}
+.ball {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ball 2s infinite linear;
+}
+.ball img {
+    width: 105px;
+}
